@@ -1,0 +1,39 @@
+<html>
+<head>
+<title> Escape Room Experience Room 1 Hint</title>
+<script src="scripts/processing.js"></script>
+<script type="text/processing" data-processing-target="mycanvas">
+
+PImage goVariable;
+
+void setup()
+{
+
+	size(2000,1000);
+	frameRate( 30 );
+	
+	goVariable = loadImage("images/gameover.jpg")
+	
+}
+
+
+void draw()
+{
+	
+	background(0,0,0);
+	
+	
+	image(goVariable,0,0);
+	
+
+
+}
+
+</script>
+<canvas id="mycanvas"></canvas>
+</head>
+
+<body>
+
+</body>
+</html>

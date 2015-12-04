@@ -1,0 +1,254 @@
+<html>
+<head>
+<title> lock </title>
+<script src="scripts/processing.js"></script>
+<script type="text/processing" data-processing-target="mycanvas">
+
+int rectLength;
+int rectHeight;
+int rectGap;
+
+int x;
+int y;
+int z;
+int a;
+int b;
+
+
+
+PImage lockVariable;
+PImage asterixVariable;
+
+PImage enterVariable;
+
+void setup()
+{
+
+	size( 1000, 1000 );
+	frameRate( 30 );
+//image upload
+	lockVariable = loadImage("images/lock.png");
+	
+	
+	
+
+	z = 1;
+	x = 0;
+	y = 0;
+	a = 1;
+	b = 0;
+	
+	
+	lockVariable = loadImage("images/lock.png")
+	
+	asterixVariable = loadImage("images/asterix.png")
+
+	enterVariable = loadImage("images/enter.png")
+	
+
+}
+
+
+void draw()
+{
+	background(0,0,0);
+	
+	
+
+	
+	text(mouseX,900,100);
+	text(mouseY,900,150);
+	
+	//boxes
+		
+	
+	fill(255,255,255)
+	rect(910,20,70,40)
+	
+	fill(255,0,0);
+	rect(550,250,400,100)
+	text("Go back",920,40)
+//images
+
+	image (lockVariable,0,0,500,600);
+
+
+//code
+//passcode 9637	
+
+if (mousePressed == true)
+{
+	if (mouseButton == LEFT && z == 1)
+	{
+		if (mouseX > 15 && mouseX < 370 &&
+			mouseY > 24 && mouseY < 434)
+			{
+				x = x+1;
+				z = 0;
+				
+				if (y > y+1 && y < y+1)
+				{
+					y = 0;
+				}
+			}
+			
+		if (mouseX > 143 && mouseX < 252 && 
+			mouseY > 450 && mouseY < 570)
+			{
+				x = x+1;
+				z = 0;
+				
+				if (y > y+1 && y < y+1)
+				{
+					y = 0;
+				}
+			}
+			
+			
+	}
+	
+	//9
+	if (mouseButton == LEFT && a == 1 && y == 0)
+	{
+		if (mouseX > 257 && mouseX < 367 &&
+			mouseY > 33 && mouseY < 162)
+			{
+				y = y+1;
+				a = 0;
+			}
+	}
+	
+	//6
+	if (mouseButton == LEFT && a == 2 && y == 1)
+	{
+		if (mouseX > 257 && mouseX < 367 &&
+			mouseY > 172 && mouseY < 300)
+			{
+				y = y+1
+				a = 0;
+			}
+	}
+	
+	//3
+	if (mouseButton == LEFT && a == 3 && y == 2)
+	{
+		if (mouseX > 259 && mouseX < 367 &&
+			mouseY > 311 && mouseY < 440)
+			{
+				y = y+1;
+				a = 0;
+			}
+			
+	}
+
+	//7
+	if (mouseButton == LEFT && a == 4 && y == 3)
+	{
+		if (mouseX > 22 && mouseX < 131 && 
+			mouseY > 34 && mouseY < 164)
+			{
+				y = y+1
+				a = 0;
+			}
+	}
+
+}
+
+
+if (mousePressed == false && x == 1)
+{	
+	image(asterixVariable, 550, 260)
+	z = 1
+	a = 2
+}
+
+
+if (mousePressed == false && x == 2)
+{
+	image(asterixVariable, 550, 260)
+	image(asterixVariable, 650, 260)
+	z = 1
+	a = 3
+	
+}
+
+if (mousePressed == false && x == 3)
+{
+	image(asterixVariable, 550, 260)
+	image(asterixVariable, 650, 260)
+	image(asterixVariable, 750, 260)
+	z = 1
+	a = 4
+}
+
+if (mousePressed == false && x == 4)
+{
+	image(asterixVariable, 550, 260)
+	image(asterixVariable, 650, 260)
+	image(asterixVariable, 750, 260)
+	image(asterixVariable, 850, 260)
+	z = 1
+	a = 5
+}
+
+if (mousePressed == false && x > 4)
+{
+	image(asterixVariable, 550, 260)
+	image(asterixVariable, 650, 260)
+	image(asterixVariable, 750, 260)
+	image(asterixVariable, 850, 260)
+	z = 1
+}
+
+	if (mousePressed == true && mouseButton == LEFT)
+	{
+		if (mouseX > 376 && mouseX < 484 && 
+			mouseY > 32 && mouseY < 162)
+			{
+				if (y == 4)
+				{
+			
+					b = 1;
+			
+					if (b == 1)
+					{
+						link("yay.html")
+					}
+				}
+			
+			if (b == 0)
+			{
+				link("lock2.html")
+			}
+		}
+	
+}
+
+	if (mousePressed == true && mouseButton == LEFT)
+		{
+		if (mouseX > 376 && mouseX < 487 && 
+			mouseY > 173 && mouseY < 296)
+			{
+			link("lock2.html")
+			}
+		}
+	if (mousePressed == true && mouseButton == LEFT)
+		{
+		if (mouseX > 910 && mouseX < 980 && 
+			mouseY > 20 && mouseY < 60)
+			{
+			link("room6.html")
+			}
+		}
+
+	
+}
+
+</script>
+<canvas id="mycanvas"></canvas>
+</head>
+
+<body>
+
+</body>
+</html>

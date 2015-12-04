@@ -1,0 +1,73 @@
+<html>
+<head> </head>
+<title>  </title>
+<script src="scripts/processing.js"></script>
+<script type="text/processing" data-processing-target="mycanvas">
+
+
+PImage room3Variable;
+PImage lockVariable;
+
+void setup()
+{
+
+	size( 1000, 1000 );
+	frameRate( 30 );
+//image upload
+	door2Variable = loadImage("images/door2.png");
+	lockVariable = loadImage("images/lock.png");
+}
+
+
+void draw()
+{
+	
+	background(0,0,0);
+	text(mouseX,900,20);
+	text(mouseY,900,50);
+	
+	
+//images
+
+	image (door2Variable,0,0,900,500);
+	image (lockVariable,795,215,25,25);
+	
+//lock
+
+	if (mousePressed == true && mouseButton == LEFT)
+		{
+ 		if (mouseX > 795 && mouseX < 820 && mouseY > 215 && mouseY < 235)
+			{
+			link("awesomelock.html")
+			}
+		}
+	
+	//arrow
+	if (mousePressed == true && mouseButton == LEFT)
+		{
+ 		if (mouseX > 22 && mouseX < 93 && mouseY > 430 && mouseY < 497)
+			{
+			link("room3.html")
+			}
+		}
+	
+	if (mouseX > 795 && mouseX < 820 && mouseY > 215 && mouseY < 235 || 
+		mouseX > 22 && mouseX < 93 && mouseY > 430 && mouseY < 497)
+		{
+			cursor(HAND)
+		}
+	
+	else
+	{
+		cursor(ARROW)
+	}
+}
+</script>
+<canvas id="mycanvas"></canvas>
+</head>
+
+<body>
+
+</body>
+</html>
+

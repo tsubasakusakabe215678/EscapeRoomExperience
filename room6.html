@@ -1,0 +1,81 @@
+<html>
+<head> </head>
+<title>  </title>
+<script src="scripts/processing.js"></script>
+<script type="text/processing" data-processing-target="mycanvas">
+
+
+PImage room3Variable;
+
+PImage puzzleVariable;
+
+PImage lockVariable;
+
+void setup()
+{
+
+	size( 1000, 1000 );
+	frameRate( 30 );
+//image upload
+	door3Variable = loadImage("images/door3.png");
+	puzzleVariable = loadImage("images/puzzle3.png");
+	hint4Variable = loadImage("images/hintd.png");
+	lockVariable = loadImage("images/lock.png");
+	
+}
+
+
+void draw()
+{
+	
+	background(0,0,0);
+	text(mouseX,900,20);
+	text(mouseY,900,50);
+	
+	
+//images
+
+	image (door3Variable,0,0,500,600);
+	
+	image (puzzleVariable,195,135,100,100);
+	image (hint4Variable,195,100,100,100);
+	
+	image (lockVariable,310,250,20,20);
+	
+//arrow
+
+	if (mousePressed == true && mouseButton == LEFT)
+		{
+ 			if (mouseX > 188 && mouseX < 261 && mouseY > 537 && mouseY < 600)
+			{
+				link("room5.html")
+			}
+			
+			if (mouseX > 310 && mouseX < 330 && mouseY > 250 && mouseY < 270)
+			{
+				link("lock2.html")
+			}
+		
+		}
+	
+	if (mouseX > 188 && mouseX < 261 && mouseY > 537 && mouseY < 600 || 
+		mouseX > 310 && mouseX < 330 && mouseY > 250 && mouseY < 270)
+	{
+		cursor(HAND)
+	}
+	
+	else
+	{
+		cursor(ARROW)
+	}
+	
+}
+</script>
+<canvas id="mycanvas"></canvas>
+</head>
+
+<body>
+
+</body>
+</html>
+

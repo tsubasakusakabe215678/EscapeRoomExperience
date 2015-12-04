@@ -1,0 +1,80 @@
+<html>
+<head>
+<title> Escape Room Experience Room 1 Hint</title>
+<script src="scripts/processing.js"></script>
+<script type="text/processing" data-processing-target="mycanvas">
+
+PImage hiVariable;
+
+void setup()
+{
+
+	size(2000,1000);
+	frameRate( 30 );
+	
+	hiVariable = loadImage("images/hi.jpg")
+	
+}
+
+
+void draw()
+{
+	
+	background(0,0,0);
+
+	
+	image(hiVariable,100,100);
+	
+
+	
+	fill(255,255,255);
+	rect(0,0,100,50);
+	text("Theeerrrreee's nooooo waaaaay ooouuuuuut...",100,90);
+	
+	fill(0,0,0);
+	text("go back",20,20);
+	
+
+	
+	
+	
+	if (mousePressed == true && mouseButton == LEFT)
+	{
+		if (mouseX > 0 && mouseX < 100 && 
+			mouseY > 0 && mouseY < 50)
+			{
+				link("index.html");
+			}
+			
+		if (mouseX > 305 && mouseX < 335 &&
+			mouseY > 300 && mouseY < 315)
+			{
+				link("gameover.html");
+			}
+	}
+	
+
+
+
+	
+	if (mouseX > 0 && mouseX < 100 && 
+		mouseY > 0 && mouseY < 50 || 
+		mouseX > 305 && mouseX < 335 && 
+		mouseY > 300 && mouseY < 315)
+		{
+			cursor(HAND)
+		}
+	else
+	{
+		cursor(ARROW)
+	}
+}
+
+</script>
+<canvas id="mycanvas"></canvas>
+</head>
+
+<body>
+
+</body>
+</html>

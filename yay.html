@@ -1,0 +1,36 @@
+<html>
+<head> </head>
+<title>  </title>
+<script src="scripts/processing.js"></script>
+<script type="text/processing" data-processing-target="mycanvas">
+
+
+PImage escapeVariable;
+
+void setup()
+{
+
+	size( 1000, 1000 );
+	frameRate( 30 );
+
+	escapeVariable = loadImage("images/escape.png")
+	
+}
+
+
+void draw()
+{
+	
+	background(0,0,0);
+	image(escapeVariable,0,0,500,600);
+	
+}
+</script>
+<canvas id="mycanvas"></canvas>
+</head>
+
+<body>
+
+</body>
+</html>
+

@@ -1,0 +1,61 @@
+<html>
+<head> </head>
+<title>  </title>
+<script src="scripts/processing.js"></script>
+<script type="text/processing" data-processing-target="mycanvas">
+
+
+PImage room3Variable;
+
+
+void setup()
+{
+
+	size( 1000, 1000 );
+	frameRate( 30 );
+//image upload
+	hint2Variable = loadImage("images/hint2.png");
+}
+
+
+void draw()
+{
+	
+	background(0,0,0);
+	text(mouseX,900,20);
+	text(mouseY,900,50);
+	
+	
+//images
+
+	image (hint2Variable,0,0,800,500);
+	
+	//hint
+		if (mousePressed == true && mouseButton == LEFT)
+		{
+ 		if (mouseX > 44 && mouseX < 92 && mouseY > 423 && mouseY < 488)
+			{
+			link("room3.html")
+			}
+		}
+	
+	
+	if (mouseX > 44 && mouseX < 92 && mouseY > 423 && mouseY < 488)
+	{
+		cursor(HAND)
+	}
+
+	else
+	{
+		cursor(ARROW)
+	}
+}
+</script>
+<canvas id="mycanvas"></canvas>
+</head>
+
+<body>
+
+</body>
+</html>
+
