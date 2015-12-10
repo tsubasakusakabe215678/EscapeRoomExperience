@@ -6,6 +6,7 @@
 
 
 PImage escapeVariable;
+PImage sawVariable;
 
 void setup()
 {
@@ -14,6 +15,7 @@ void setup()
 	frameRate( 30 );
 
 	escapeVariable = loadImage("images/escape.png")
+	sawVariable = loadImage("images/saw.jpg")
 	
 }
 
@@ -22,7 +24,23 @@ void draw()
 {
 	
 	background(0,0,0);
+	
+	fill(255,255,255);
+	
+	text("Congratulations, you won the game.",600,200);
+	
+	if(mousePressed == true && mouseButton == LEFT)
+	{
+		link("end.html")
+	}
+	
 	image(escapeVariable,0,0,500,600);
+	image(sawVariable, 550,250,300,250)
+	
+	
+	
+	
+	
 	
 }
 </script>

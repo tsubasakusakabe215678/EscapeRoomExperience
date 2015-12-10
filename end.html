@@ -1,0 +1,53 @@
+<script src="scripts/processing.js"></script>
+<script type="text/processing" data-processing-target="mycanvas">
+
+PImage restartVariable;
+PImage endVariable;
+
+void setup()
+{
+
+	size(2000,1000);
+	frameRate( 30 );
+	
+	endVariable = loadImage("images/end.gif");
+	restartVariable = loadImage("images/restart.png");	
+}
+
+
+void draw()
+{
+	background(0,0,0);
+	
+	image(endVariable,0,0,900,500);
+
+	image(restartVariable,677,470,223,27);
+	
+
+	
+	fill(255,255,255);
+	text(mouseX,20,20);
+	text(mouseY,20,40);
+	
+	if(mousePressed == true && mouseButton == LEFT)
+	{
+		if (mouseX > 677 && mouseX < 900 &&
+			mouseY > 475 && mouseY < 500)
+			{
+				link("index.html")
+			}
+			
+	}
+	
+	
+	
+	
+			
+
+}
+
+</script>
+<canvas id="mycanvas"></canvas>
+</head>
+
+<body>

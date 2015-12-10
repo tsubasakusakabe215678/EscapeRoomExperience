@@ -1,0 +1,62 @@
+<html>
+<head>
+<title> Escape Room Experience Room 1</title>
+<script src="scripts/processing.js"></script>
+<script type="text/processing" data-processing-target="mycanvas">
+
+PImage introVariable;
+PImage iwanttoplayVariable;
+PImage startVariable;
+
+
+void setup()
+{
+
+	size(2000,1000);
+	frameRate( 30 );
+	
+	introVariable = loadImage("images/intro.gif");
+	iwanttoplayVariable = loadImage("images/iwanttoplay.png");
+	startVariable= loadImage("images/start.png");
+
+}
+
+
+void draw()
+{
+	background(0,0,0);
+	
+	image(introVariable,0,0,900,500);
+
+	
+	fill(255,255,255);
+	text(mouseX,20,20);
+	text(mouseY,20,40);
+
+
+	if(mousePressed == true && mouseButton == LEFT)
+	{
+		if (mouseX > 677 && mouseX < 900 &&
+			mouseY > 475 && mouseY < 500)
+			{
+				link("indexa.html")
+			}
+			
+	}
+	
+	
+
+	image(iwanttoplayVariable,300,400,300,150);
+	image(startVariable,677,475,223,25);
+
+
+}
+
+</script>
+<canvas id="mycanvas"></canvas>
+</head>
+
+<body>
+
+</body>
+</html>

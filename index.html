@@ -4,82 +4,34 @@
 <script src="scripts/processing.js"></script>
 <script type="text/processing" data-processing-target="mycanvas">
 
-PImage roomVariable;
-PImage arrowVariable;
-PImage hintVariable;
-
+PImage a;
 void setup()
 {
 
 	size(2000,1000);
 	frameRate( 30 );
 	
-	roomVariable = loadImage("images/room1.png");
-	arrowVariable = loadImage("images/arrowdown.png");
-	hintVariable = loadImage("images/hintb.png");
+	a = loadImage("images/introtext.png")
 
 }
 
 
 void draw()
 {
-	background(0,0,0);
+	background(255,50,50);
 	
-	
-	image(roomVariable,0,0,700,500)
-	image(arrowVariable,100,400,100,100)
-	image(hintVariable, 295,15,100,100)
-	
-	fill(255,255,255);
-	text(mouseX,20,20);
-	text(mouseY,20,40);
-
+	image(a,0,0,600,600);
 	
 	if(mousePressed == true && mouseButton == LEFT)
 	{
-		if (mouseX > 370 && mouseX < 490 &&
-			mouseY > 186 && mouseY < 260)
-			{
-				link("hint.html")
-			}
-			
-		if (mouseX > 290 && mouseX < 298 && 
-			mouseY > 354 && mouseY < 361)
-			{
-				link("problem.html")
-			}
-			
-		if (mouseX > 105 && mouseX < 195 &&
-			mouseY > 415 && mouseY < 500)
-			{
-				link("door1.html")
-			}
-			
-		if (mouseX > 80 && mouseX < 245 && 
-			mouseY > 45 && mouseY < 210)
-			{
-				link("dummy.html")
-			}
-	}
-
-	if (mouseX > 370 && mouseX < 490 && 
-		mouseY > 186 && mouseY < 260 || 
-		mouseX > 285 && mouseX < 300 && 
-		mouseY > 354 && mouseY < 360 || 
-		mouseX > 105 && mouseX < 195 && 
-		mouseY > 415 && mouseY < 500 || 
-		mouseX > 80 && mouseX < 245 && 
-		mouseY > 45 && mouseY < 210)
-	{
-		cursor(HAND);
+		link("i.html")
 	}
 	
-	else
-	{
-		cursor(ARROW);
-	}
 
 	
+	
+
+
 }
 
 </script>
